@@ -3,7 +3,7 @@ FROM registry.access.redhat.com/ubi10/go-toolset:10.0 AS builder
 
 WORKDIR /workspace
 
-COPY go.mod ./
+COPY go.mod main.go ./
 RUN go mod download
 
 COPY . .
